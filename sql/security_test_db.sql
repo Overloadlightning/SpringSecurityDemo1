@@ -24,15 +24,29 @@ CREATE TABLE `role`
     `name` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
 );
+# CREATE TABLE `user_role`
+# (
+#     `user_id` bigint(11) NOT NULL,
+#     `role_id` bigint(11) NOT NULL
+# );
 CREATE TABLE `user_role`
 (
+    `id`      bigint(11) NOT NULL AUTO_INCREMENT,
     `user_id` bigint(11) NOT NULL,
-    `role_id` bigint(11) NOT NULL
+    `role_id` bigint(11) NOT NULL,
+    PRIMARY KEY (`id`)
 );
+# CREATE TABLE `role_permission`
+# (
+#     `role_id`       bigint(11) NOT NULL,
+#     `permission_id` bigint(11) NOT NULL
+# );
 CREATE TABLE `role_permission`
 (
+    `id`            bigint(11) NOT NULL AUTO_INCREMENT,
     `role_id`       bigint(11) NOT NULL,
-    `permission_id` bigint(11) NOT NULL
+    `permission_id` bigint(11) NOT NULL,
+    PRIMARY KEY (`id`)
 );
 CREATE TABLE `permission`
 (
